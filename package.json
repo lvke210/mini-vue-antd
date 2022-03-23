@@ -5,10 +5,15 @@
   "scripts": {
     "dev": "vue-cli-service serve",
     "build": "vue-cli-service build",
-    "lint": "vue-cli-service lint"
+    "lint": "vue-cli-service lint",
+    "prepare": "husky install"
   },
   "dependencies": {
+    "@commitlint/cli": "^16.2.3",
+    "@commitlint/config-conventional": "^16.2.1",
     "core-js": "^3.8.3",
+    "husky": "^7.0.4",
+    "lint-staged": "^12.3.7",
     "vue": "^3.2.13",
     "vue-router": "^4.0.3"
   },
@@ -29,5 +34,11 @@
     "sass": "^1.32.7",
     "sass-loader": "^12.0.0",
     "typescript": "~4.5.5"
+  },
+  "lint-staged": {
+    "*.{tsx,ts,js}": [
+      "eslint --fix",
+      "git add"
+    ]
   }
 }
