@@ -1,5 +1,5 @@
 <template>
-  <div>homeaaaa</div>
+  <router-view></router-view>
 </template>
 <script setup lang="ts">
 import { getUser } from "@/api"
@@ -9,6 +9,5 @@ const state = reactive<any>({
 })
 onMounted(async () => {
   state.userList = await getUser()
-  console.log(state.userList)
 })
 </script>
