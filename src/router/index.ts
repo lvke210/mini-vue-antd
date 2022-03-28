@@ -4,8 +4,16 @@ import HomeA from "@/views/home/index.vue"
 const routes: Array<RouteRecordRaw> = [
   {
     path: "/",
-    name: "home",
+    name: "/",
     component: HomeA,
+    redirect: "home",
+    children: [
+      {
+        path: "/home",
+        name: "home",
+        component: () => import("@/views/home/index.vue"),
+      },
+    ],
   },
 
   {

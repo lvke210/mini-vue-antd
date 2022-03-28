@@ -1,5 +1,5 @@
 <template>
-  <div>home</div>
+  <div>homeaaaa</div>
 </template>
 <script setup lang="ts">
 import { getUser } from "@/api"
