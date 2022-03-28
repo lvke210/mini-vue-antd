@@ -16,5 +16,15 @@ module.exports = defineConfig({
       },
     },
   },
+  devServer: {
+    proxy: {
+      "/api": {
+        // target: "http://119.3.26.182:3000/api/",
+        // target: "http://119.3.26.182:3008/api/",
+        target: "http://localhost:3008",
+        // pathRewrite: { "^/api": "" },
+      },
+    },
+  },
   // ...other config
 })

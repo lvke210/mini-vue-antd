@@ -11,7 +11,9 @@
   "dependencies": {
     "@commitlint/cli": "^16.2.3",
     "@commitlint/config-conventional": "^16.2.1",
+    "@types/ramda": "^0.28.4",
     "ant-design-vue": "^2.2.8",
+    "axios": "^0.26.1",
     "babel-plugin-import": "^1.13.3",
     "core-js": "^3.8.3",
     "dayjs": "^1.11.0",
