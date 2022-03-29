@@ -31,7 +31,6 @@ const openKeys = ref<string[]>(["sub1"])
 const route = useRoute()
 const router = useRouter()
 const routeList = route.matched[0].children
-console.log(routeList, "route")
 
 function subMenuClick(item: any) {
   console.log(item)
