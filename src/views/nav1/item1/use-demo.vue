@@ -3,10 +3,21 @@
   <a-button @click="increment">increment</a-button>
   <a-button>{{ double }}</a-button>
 </template>
-<script setup lang="ts">
+<script lang="ts">
+import { defineComponent } from "vue"
 import useCounter from "@/components/use/useCounter"
-const obj = { start: 2, step: 2 }
-const { count, double, increment } = useCounter(obj)
+export default defineComponent({
+  name: "useCompositionApiDemo",
+  setup() {
+    const obj = { start: 2, step: 2 }
+    const { count, double, increment } = useCounter(obj)
+    return {
+      count,
+      double,
+      increment,
+    }
+  },
+})
 </script>
 <style scoped>
 .wrap {
